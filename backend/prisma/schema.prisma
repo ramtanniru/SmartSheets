@@ -1,0 +1,20 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model SheetData {
+  id        Int    @id @default(autoincrement())
+  name      String
+  role      String
+  team      String
+  status    String
+  age       Int
+  avatar    String
+  email     String
+  sheetRow  Int
+}
